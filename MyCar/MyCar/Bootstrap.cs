@@ -1,7 +1,5 @@
 ﻿using System;
 using System.IO;
-using Freecol;
-using MdfManufacturers;
 using Microsoft.Extensions.Configuration;
 using WonderTools.VendorContract;
 
@@ -29,8 +27,8 @@ namespace WonderTools.MyCar
 
             var simulator = new CarSpeedSimulator();
             var speedometer = new Speedometer(simulator);
-            
-            IAlarm alarm = new FeecolAlarmAdapter(new LowFrequencyAlarm());
+
+            IAlarm alarm = AlarmFactory.CreateAlarm(carType);
             var speedAlarm = new SpeedAlarm(alarm, speedometer);
             var seatBelt = new SeatBelt(alarm, speedometer);
 
