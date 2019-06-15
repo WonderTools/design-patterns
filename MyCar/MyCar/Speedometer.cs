@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyCar
+namespace WonderTools.MyCar
 {
     public class Speedometer
     {

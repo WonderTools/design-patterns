@@ -1,4 +1,4 @@
-﻿namespace MyCar
+﻿namespace WonderTools.MyCar
 {
     public class SpeedAlarm
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace MyCar
+namespace WonderTools.MyCar
 {
-    class Program
+    class Bootstrap
     {
         static void Main(string[] args)
         {
