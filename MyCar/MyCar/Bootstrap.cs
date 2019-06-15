@@ -29,10 +29,8 @@ namespace WonderTools.MyCar
 
             var simulator = new CarSpeedSimulator();
             var speedometer = new Speedometer(simulator);
-
-            //var freecolAlarm = new LowFrequencyAlarm();
-
-            IAlarm alarm = new Alarm();
+            
+            IAlarm alarm = new FeecolAlarmAdapter(new LowFrequencyAlarm());
             var speedAlarm = new SpeedAlarm(alarm, speedometer);
             var seatBelt = new SeatBelt(alarm, speedometer);
 
