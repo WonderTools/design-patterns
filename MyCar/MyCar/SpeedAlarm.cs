@@ -1,4 +1,6 @@
-﻿namespace WonderTools.MyCar
+﻿using WonderTools.VendorContract;
+
+namespace WonderTools.MyCar
 {
     public class SpeedAlarm : ISpeedObserver
     {

@@ -1,4 +1,4 @@
-﻿namespace WonderTools.MyCar
+﻿namespace WonderTools.VendorContract
 {
     public interface IAlarm
     {

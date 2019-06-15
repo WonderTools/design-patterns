@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
+using Freecol;
+using MdfManufacturers;
 using Microsoft.Extensions.Configuration;
+using WonderTools.VendorContract;
 
 namespace WonderTools.MyCar
 {
@@ -26,6 +29,8 @@ namespace WonderTools.MyCar
 
             var simulator = new CarSpeedSimulator();
             var speedometer = new Speedometer(simulator);
+
+            //var freecolAlarm = new LowFrequencyAlarm();
 
             IAlarm alarm = new Alarm();
             var speedAlarm = new SpeedAlarm(alarm, speedometer);

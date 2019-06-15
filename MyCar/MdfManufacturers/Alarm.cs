@@ -1,6 +1,7 @@
 ﻿using System;
+using WonderTools.VendorContract;
 
-namespace WonderTools.MyCar
+namespace MdfManufacturers
 {
     public class Alarm : IAlarm
     {
