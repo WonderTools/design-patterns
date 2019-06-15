@@ -2,10 +2,10 @@
 {
     public class SpeedAlarm : ISpeedObserver
     {
-        private readonly Alarm _alarm;
+        private readonly IAlarm _alarm;
         private int _oldSpeed = 0;
 
-        public SpeedAlarm(Alarm alarm, Speedometer speedometer)
+        public SpeedAlarm(IAlarm alarm, Speedometer speedometer)
         {
             _alarm = alarm;
             speedometer.AddSpeedObserver(this);
@@ -24,11 +24,11 @@
     public class SeatBelt : ISpeedObserver
     {
 
-        private readonly Alarm _alarm;
+        private readonly IAlarm _alarm;
         private int _oldSpeed = 0;
         private bool _isLocked = false;
 
-        public SeatBelt(Alarm alarm, Speedometer speedometer)
+        public SeatBelt(IAlarm alarm, Speedometer speedometer)
         {
             _alarm = alarm;
             speedometer.AddSpeedObserver(this);

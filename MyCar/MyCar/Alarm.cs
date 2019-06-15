@@ -2,11 +2,11 @@
 
 namespace WonderTools.MyCar
 {
-    public class Alarm
+    public class Alarm : IAlarm
     {
         public void RaiseAlarm()
         {
-            Console.WriteLine("Beep");
+            Console.Beep(500, 500);
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 
 namespace WonderTools.MyCar
 {
@@ -6,6 +8,15 @@ namespace WonderTools.MyCar
     {
         static void Main(string[] args)
         {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            IConfigurationRoot configuration = builder.Build();
+
+            var carType = configuration.GetSection("carType").Value;
+            Console.WriteLine("The car type is :"+ carType);
+
             Console.WriteLine("Please press the option");
             Console.WriteLine("i/I for increase car speed");
             Console.WriteLine("d/D for decrease car speed");
@@ -16,7 +27,7 @@ namespace WonderTools.MyCar
             var simulator = new CarSpeedSimulator();
             var speedometer = new Speedometer(simulator);
 
-            var alarm = new Alarm();
+            IAlarm alarm = new Alarm();
             var speedAlarm = new SpeedAlarm(alarm, speedometer);
             var seatBelt = new SeatBelt(alarm, speedometer);
 
