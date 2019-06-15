@@ -1,15 +1,17 @@
 ﻿namespace WonderTools.MyCar
 {
-    public class SpeedAlarm
+    public class SpeedAlarm : ISpeedObserver
     {
         private readonly Alarm _alarm;
         private int _oldSpeed = 0;
 
-        public SpeedAlarm(Alarm alarm)
+        public SpeedAlarm(Alarm alarm, Speedometer speedometer)
         {
             _alarm = alarm;
+            speedometer.AddSpeedObserver(this);
         }
-        public void ProcessSpeed(int speed)
+
+        public void OnSpeedChange(int speed)
         {
             if ((_oldSpeed < 80) && (speed >= 80))
             {

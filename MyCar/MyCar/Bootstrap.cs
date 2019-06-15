@@ -13,9 +13,12 @@ namespace WonderTools.MyCar
 
 
             var simulator = new CarSpeedSimulator();
+            var speedometer = new Speedometer(simulator);
+
+
             var alarm = new Alarm();
-            var speedAlarm = new SpeedAlarm(alarm);
-            var speedometer = new Speedometer(simulator, speedAlarm);
+            var speedAlarm = new SpeedAlarm(alarm, speedometer);
+            
             while (true)
             {
                 var key = Console.ReadKey();

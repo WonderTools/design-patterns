@@ -22,13 +22,13 @@ namespace WonderTools.MyCar
 
         public void Increase()
         {
-            if (Speed >= 220) return; ;
+            if (Speed >= 220) return;
             Speed = Speed + 10;
         }
 
         public void Decrease()
         {
-            if (Speed <= 0) return; ;
+            if (Speed <= 0) return;
             Speed = Speed - 10;
         }
     }

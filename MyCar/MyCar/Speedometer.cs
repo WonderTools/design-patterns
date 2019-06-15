@@ -1,21 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WonderTools.MyCar
 {
     public class Speedometer
     {
-        private readonly SpeedAlarm _alarm;
+        List<ISpeedObserver> _speedObservers = new List<ISpeedObserver>();
 
-        public Speedometer(CarSpeedSimulator speedSimulator, SpeedAlarm alarm)
+        public Speedometer(CarSpeedSimulator speedSimulator)
         {
-            _alarm = alarm;
             speedSimulator.SpeedChanged += OnSpeedChanged;
         }
 
         private void OnSpeedChanged(int speed)
         {
             Console.WriteLine("Current Speed :" + speed);
-            _alarm.ProcessSpeed(speed);
+            foreach (var speedObserver in _speedObservers)
+            {
+                speedObserver.OnSpeedChange(speed);
+            }
+
+        }
+
+        public void AddSpeedObserver(ISpeedObserver speedObserver)
+        {
+            _speedObservers.Add(speedObserver);
         }
     }
 }
