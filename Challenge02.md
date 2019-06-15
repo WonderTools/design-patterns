@@ -10,5 +10,6 @@ Please modify the code below to integrate Freecol Alarms for Hi End cars
 https://github.com/WonderTools/design-patterns/archive/Challenge-02.zip
 
 The code base should be able to run on both Hi End and Normal Cars.
-In the file appsettings.json, the field "carType" will have "normal" or "hiEnd" depending on the car.
+
+In the file appsettings.json, the field "carType" will have "normal" or "hiEnd" depending on the type of car.
 
