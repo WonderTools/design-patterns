@@ -44,8 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AlarmFactory.cs" />
+    <Compile Include="Bootstrap.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="CarSpeedSimulator.cs" />
+    <Compile Include="FeecolAlarmAdapter.cs" />
+    <Compile Include="ISpeedObserver.cs" />
+    <Compile Include="ISpeedSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remote.cs" />
+    <Compile Include="SeatBelt.cs" />
+    <Compile Include="SpeedAlarm.cs" />
+    <Compile Include="Speedometer.cs" />
+    <Compile Include="VerifyingAlarmProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
