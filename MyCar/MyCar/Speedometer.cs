@@ -3,7 +3,12 @@ using System.Collections.Generic;
 
 namespace WonderTools.MyCar
 {
-    public class Speedometer
+    public interface ISpeedSource
+    {
+        void AddSpeedObserver(ISpeedObserver speedObserver);
+    }
+
+    public class Speedometer : ISpeedSource
     {
         List<ISpeedObserver> _speedObservers = new List<ISpeedObserver>();
 
