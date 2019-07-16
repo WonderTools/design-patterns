@@ -33,7 +33,7 @@ namespace WonderTools.MyCar
         {
             if ((_oldSpeed < 20) && (speed >= 20))
             {
-                _alarm?.RaiseAlarm();
+                if(_isLocked == false)  _alarm?.RaiseAlarm();
             }
             _oldSpeed = speed;
         }

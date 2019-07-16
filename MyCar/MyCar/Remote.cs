@@ -1,23 +1,24 @@
 ﻿using System;
+using System.Net.Mime;
 
 namespace WonderTools.MyCar
 {
     public class Remote
     {
-        private readonly Car _car;
+        private readonly ICommandFactory _commandFactory;
 
-        public Remote(Car car)
+        public Remote(ICommandFactory commandFactory)
         {
-            _car = car;
+            _commandFactory = commandFactory;
         }
 
         public void HandleUserInput()
         {
             Console.WriteLine("Please press the option");
-            Console.WriteLine("i/I for increase car speed");
-            Console.WriteLine("d/D for decrease car speed");
-            Console.WriteLine("u/U for unlock car");
-            Console.WriteLine("l/L for lock car");
+            Console.WriteLine("i/I for increase speed");
+            Console.WriteLine("d/D for decrease speed");
+            Console.WriteLine("u/U for unlock");
+            Console.WriteLine("l/L for lock");
             Console.WriteLine("e/E for exit the application");
 
             while (true)
@@ -27,11 +28,11 @@ namespace WonderTools.MyCar
                 var keyChar = key.KeyChar;
                 var optionString = keyChar.ToString().ToLower();
 
-                if (optionString == "i") _car.IncreaseSpeed();
-                else if (optionString == "d") _car.DecreaseSpeed();
-                else if (optionString == "l") _car.Lock();
-                else if (optionString == "u") _car.Unlock();
-                else if (optionString == "e") break;
+                if (optionString == "i") _commandFactory.GetICommand().Execute();
+                else if (optionString == "d") _commandFactory.GetDCommand().Execute();
+                else if (optionString == "l") _commandFactory.GetLCommand().Execute();
+                else if (optionString == "u") _commandFactory.GetUCommand().Execute();
+                else if (optionString == "e") _commandFactory.GetECommand().Execute();
                 else Console.WriteLine("unknown option");
             }
         }

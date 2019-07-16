@@ -10,20 +10,28 @@ namespace WonderTools.MyCar
         static void Main(string[] args)
         {
             var configuration = GetConfiguration();
+            Remote remote;
 
-            var carType = configuration.GetSection("carType").Value;
-            Console.WriteLine("The car type is :"+ carType);
-
-            var mode = configuration.GetSection("mode").Value;
-            Console.WriteLine("The mode is :" + mode);
-            var car = BuildCar(carType, mode);
-
-            var remote = new Remote(car);
+            if (configuration.GetSection("vehicle").Value == "car")
+            {
+                Console.WriteLine("The vehicle is a car");
+                var carType = configuration.GetSection("carType").Value;
+                Console.WriteLine("The car type is :" + carType);
+                var mode = configuration.GetSection("mode").Value;
+                Console.WriteLine("The mode is :" + mode);
+                var car = BuildCar(carType, mode);
+                remote = new Remote(new CarCommandFactory(car));
+            }
+            else
+            {
+                Console.WriteLine("The vehicle is a bike");
+                remote = new Remote(new BikeCommandFactory(new Bike()));
+            }
             remote.HandleUserInput();
         }
 
         
-
+        //This is not actual builder pattern
         private static Car BuildCar(string carType, string mode)
         {
             var simulator = new CarSpeedSimulator();
