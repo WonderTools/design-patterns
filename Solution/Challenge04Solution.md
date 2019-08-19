@@ -6,7 +6,8 @@ We will discuss the tradeoffs in each of this approach.
 
 ## Approach 1
 
-![Approach 1](https://github.com/WonderTools/design-patterns/blob/master/Solution/approach1.png)
+![Approach 1](https://github.com/WonderTools/design-patterns/blob/master/Solution/approach1.png?raw=true)
+[Code](https://github.com/WonderTools/design-patterns/blob/master/MallCharges/MallChargesCalculator-Approach1.zip?raw=true)
 
 ### Advantages
 * Very easy and understandable
@@ -19,7 +20,7 @@ We will discuss the tradeoffs in each of this approach.
 ## Approach 2
  
 ![Approach 2](https://github.com/WonderTools/design-patterns/blob/master/Solution/approach2.png)
-
+[Code](https://github.com/WonderTools/design-patterns/blob/master/MallCharges/MallChargesCalculator-Approach2.zip?raw=true)
 ### Advantages
 * Very easy and understandable
 * Persistance and buiness logic is segregated
@@ -31,6 +32,7 @@ We will discuss the tradeoffs in each of this approach.
 ## Approach 3
  
 ![Approach 3 (Template Method Design Pattern)](https://github.com/WonderTools/design-patterns/blob/master/Solution/approach3.png)
+[Code](https://github.com/WonderTools/design-patterns/blob/master/MallCharges/MallChargesCalculator-Approach3.zip?raw=true)
 
 ### Advantages
 * Very easy and understandable
@@ -42,6 +44,7 @@ We will discuss the tradeoffs in each of this approach.
 ## Approach 4
  
 ![Approach 4 (Visitor Design Pattern)](https://github.com/WonderTools/design-patterns/blob/master/Solution/approach4.png)
+[Code](https://github.com/WonderTools/design-patterns/blob/master/MallCharges/MallChargesCalculator-Approach4.zip?raw=true)
 
 ### Advantages
 * Clean
