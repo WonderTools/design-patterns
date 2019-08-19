@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="AdvertisementBoard.cs" />
     <Compile Include="ChargesCalculatingFacade.cs" />
+    <Compile Include="CleanChargesCalculatingVisitor.cs" />
     <Compile Include="Eatery.cs" />
+    <Compile Include="ElectricityChargesCalculatingVisitor.cs" />
     <Compile Include="FoodCourt.cs" />
     <Compile Include="IRentable.cs" />
     <Compile Include="Multiplex.cs" />
@@ -53,9 +55,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentableRepository.cs" />
+    <Compile Include="RentCalculatingVisitor.cs" />
     <Compile Include="ShowRoom.cs" />
     <Compile Include="Stall.cs" />
     <Compile Include="Theater.cs" />
+    <Compile Include="WaterChargesCalculatingVisitor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
