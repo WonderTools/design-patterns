@@ -1,0 +1,30 @@
+@startuml
+
+IVisitor : int GetCharge(Stall)
+IVisitor : int GetCharge(ShowRoom)
+IVisitor : int GetCharge(Multiplex)
+IVisitor : int GetCharge(Theater)
+IVisitor : int GetCharge(Eatery)
+IVisitor : int GetCharge(FoodCourt)
+IVisitor : int GetCharge(Parking)
+IVisitor : int GetCharge(AdvertismentBoard)
+
+
+IVisitor <|-- WaterChargeCalculatingVisitor
+IVisitor <|-- ElectricityChargeCalculatingVisitor
+IVisitor <|-- CleaningChargeCalculatingVisitor
+IVisitor <|-- RentChargeCalculatingVisitor
+
+IRentable : int Visit(IVisitor)
+
+IRentable <|-- ShowRoom
+IRentable <|-- Stall
+IRentable <|-- Multiplex
+IRentable <|-- Theater
+IRentable <|-- Eatery
+IRentable <|-- FoodCourt
+IRentable <|-- Parking
+IRentable <|-- AdvertismentBoard
+
+
+@enduml

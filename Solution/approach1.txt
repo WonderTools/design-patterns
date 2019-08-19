@@ -1,0 +1,16 @@
+@startuml
+
+IRentable : int GetRentCharges()
+IRentable : int GetElectricityCharges()
+IRentable : int GetWaterCharges()
+IRentable : int GetCleaningCharges()
+
+IRentable <|-- ShowRoom
+IRentable <|-- Stall
+IRentable <|-- Multiplex
+IRentable <|-- Theater
+IRentable <|-- Eatery
+IRentable <|-- FoodCourt
+IRentable <|-- Parking
+IRentable <|-- AdvertismentBoard
+@enduml

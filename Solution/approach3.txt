@@ -1,0 +1,32 @@
+@startuml
+
+IChargeCalculator : int GetCharge(IRentable)
+IChargeCalculator : int GetStallCharge(Stall)
+IChargeCalculator : int GetShowRoomChargeCharge(ShowRoom)
+IChargeCalculator : int GetMultiplexCharge(Multiplex)
+IChargeCalculator : int GetTheaterCharge(Theater)
+IChargeCalculator : int GetEateryCharge(Eatery)
+IChargeCalculator : int GetFoodCourtCharge(FoodCourt)
+IChargeCalculator : int GetParkingCharge(Parking)
+IChargeCalculator : int GetParkingCharge(AdvertismentBoard)
+
+
+
+
+IChargeCalculator <|-- WaterChargeCalculator
+IChargeCalculator <|-- ElectricityChargeCalculator
+IChargeCalculator <|-- CleaningChargeCalculator
+IChargeCalculator <|-- RentChargeCalculator
+
+
+IRentable <|-- ShowRoom
+IRentable <|-- Stall
+IRentable <|-- Multiplex
+IRentable <|-- Theater
+IRentable <|-- Eatery
+IRentable <|-- FoodCourt
+IRentable <|-- Parking
+IRentable <|-- AdvertismentBoard
+
+
+@enduml
