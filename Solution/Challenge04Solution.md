@@ -39,5 +39,19 @@ We will discuss the tradeoffs in each of this approach.
 ### Limitations
 * OCP violoation. It's difficult to add a new Rentable. (However it would be more common scenario to add a charge than a rentable, so this would be better that Approach 1 and 2)
 
+## Approach 4
+ 
+![Approach 4 (Visitor Design Pattern)](https://github.com/WonderTools/design-patterns/blob/master/Solution/approach4.png)
+
+### Advantages
+* Clean
+* Introduction of a rentable will have a compile time check. (Run time check in Approach 3)
+
+### Limitations
+* OCP violoation. It's difficult to add a new Rentable. (However it would be more common scenario to add a charge than a rentable, so this would be better that Approach 1 and 2)
+* A bit complex (Developers need to familiar with Visitor Pattern)
+* A reverse coupling in the solution. (eg. ShowRoom know about the existance of Stall due to Visitor)
+
+
 
 
