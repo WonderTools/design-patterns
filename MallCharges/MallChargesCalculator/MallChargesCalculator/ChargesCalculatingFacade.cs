@@ -26,25 +26,25 @@ namespace MallChargesCalculator
         private int GetRentingCharges(IRentable rentable)
         {
             var rentingCalculatingVisitor = new RentCalculatingVisitor();
-            return rentable.Visit(rentingCalculatingVisitor);
+            return rentingCalculatingVisitor.CalculateCharge(rentable);
         }
 
         private int GetWaterCharges(IRentable rentable)
         {
             var waterChargesCalculatingVisitor = new WaterChargesCalculatingVisitor();
-            return rentable.Visit(waterChargesCalculatingVisitor);
+            return waterChargesCalculatingVisitor.CalculateCharge(rentable);
         }
 
         private int GetElectricityCharges(IRentable rentable)
         {
             var electricityChargesCalculatingVisitor = new ElectricityChargesCalculatingVisitor();
-            return rentable.Visit(electricityChargesCalculatingVisitor);
+            return electricityChargesCalculatingVisitor.CalculateCharge(rentable);
         }
 
         private int GetCleaningCharges(IRentable rentable)
         {
             var cleaningChargesCalculatingVisitor = new CleanChargesCalculatingVisitor();
-            return rentable.Visit(cleaningChargesCalculatingVisitor);
+            return cleaningChargesCalculatingVisitor.CalculateCharge(rentable);
         }
     }
 }

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdvertisementBoard.cs" />
+    <Compile Include="ChargeCalculator.cs" />
     <Compile Include="ChargesCalculatingFacade.cs" />
     <Compile Include="CleanChargesCalculatingVisitor.cs" />
     <Compile Include="Eatery.cs" />

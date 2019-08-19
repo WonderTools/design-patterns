@@ -1,43 +1,43 @@
 ﻿namespace MallChargesCalculator
 {
-    public class CleanChargesCalculatingVisitor : IVisitor
+    public class CleanChargesCalculatingVisitor : ChargeCalculator
     {
-        public int Compute(ShowRoom s)
+        protected override int CalculateShowRoomCharge(ShowRoom s)
         {
             return s.AreaInSquareFeet;
         }
 
-        public int Compute(Stall s)
+        protected override int CalculateStallCharge(Stall s)
         {
             return s.AreaInSquareFeet;
         }
 
-        public int Compute(Theater s)
+        protected override int CalculateTheaterCharge(Theater s)
         {
             return s.SeatingCapacity * 10;
         }
 
-        public int Compute(Multiplex m)
+        protected override int CalculateMultiplexCharge(Multiplex m)
         {
             return m.TotalSeatingCapacity * 10;
         }
 
-        public int Compute(FoodCourt f)
+        protected override int CalculateFoodCourtCharge(FoodCourt f)
         {
             return f.SeatingCapacity * 25;
         }
 
-        public int Compute(Eatery f)
+        protected override int CalculateEateryCharge(Eatery f)
         {
             return f.SeatingCapacity * 25;
         }
 
-        public int Compute(AdvertisementBoard a)
+        protected override int CalculateAdvertisementBoardCharge(AdvertisementBoard a)
         {
             return 50;
         }
 
-        public int Compute(Parking p)
+        protected override int CalculateParkingCharge(Parking rentable)
         {
             return 2000;
         }

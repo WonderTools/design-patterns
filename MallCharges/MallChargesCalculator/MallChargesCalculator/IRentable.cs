@@ -3,11 +3,9 @@
     public interface IRentable
     {
         int Id { get; set; }
-
-        int Visit(IVisitor visitor);
     }
 
-    public interface IVisitor
+    public interface IVisitor1
     {
         int Compute(ShowRoom s);
         int Compute(Stall s);
