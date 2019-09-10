@@ -1,6 +1,6 @@
 # Solution
 
-This is the solution for the [problem] (https://github.com/WonderTools/design-patterns/blob/master/Problem01/Assignment/ProblemStatement.md)
+This is the solution for the [problem](https://github.com/WonderTools/design-patterns/blob/master/Problem01/Assignment/ProblemStatement.md)
 
 ## Initialial Implementation
 
