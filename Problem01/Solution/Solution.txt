@@ -1,0 +1,29 @@
+@startuml
+
+package "Main" #DDDDDD {
+	class Program
+}
+
+package "App" #DDDDDD {
+
+		class ISpeedObserver
+		class Speedometer
+		class CarSpeedSimulator
+		class SpeedAlarm
+		class Alarm
+		class SeatBelt	
+}
+
+
+Speedometer .right.> ISpeedObserver
+
+
+SpeedAlarm .down.> Alarm
+SpeedAlarm .up.|> ISpeedObserver
+SeatBelt .up.|> ISpeedObserver
+Speedometer <.. SeatBelt
+Speedometer <.. SpeedAlarm
+Speedometer ..> CarSpeedSimulator
+
+
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+
+SpeedAlarm ..> Alarm
+Speedometer ..> SpeedAlarm
+Speedometer ..> CarSpeedSimulator
+
+
+@enduml
