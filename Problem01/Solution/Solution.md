@@ -17,3 +17,5 @@ It would acutally be okay for a SpeedAlarm to depend on the Speedometer. After a
 So at a design(compile) time we want SpeedAlarm to be dependent on Speedometer. At run time, we want Speedometer to be dependant on SpeedAlarm. Here we have compile dependencies opposing the direction of run time dependencies. And to achieve this we can invert the direction of dependencies using dependency inversion principle. Once we have this dependency inverted, we can add Seatbelt class in the similar way. The uml representation of the solution would be as shown below
 
 ![Solution](Solution.png)
+
+Here we have implemented dependency inversion. The solution we arrived at is what is called as the observer design pattern.
