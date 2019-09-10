@@ -5,8 +5,6 @@ namespace MyCar
 {
     public class Speedometer
     {
-        private readonly SpeedAlarm _alarm;
-
         List<ISpeedObserver> _observers = new List<ISpeedObserver>();
 
         public void RegisterObserver(ISpeedObserver speedObserver)
@@ -14,9 +12,8 @@ namespace MyCar
             _observers.Add(speedObserver);
         }
 
-        public Speedometer(CarSpeedSimulator speedSimulator, SpeedAlarm alarm)
+        public Speedometer(CarSpeedSimulator speedSimulator)
         {
-            _alarm = alarm;
             speedSimulator.SpeedChanged += OnSpeedChanged;
         }
 

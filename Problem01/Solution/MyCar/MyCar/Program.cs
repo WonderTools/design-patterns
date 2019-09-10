@@ -15,11 +15,11 @@ namespace MyCar
 
             var simulator = new CarSpeedSimulator();
             var alarm = new Alarm();
-            var speedAlarm = new SpeedAlarm(alarm);
-            var speedometer = new Speedometer(simulator, speedAlarm);
-            var seatBelt = new SeatBelt(alarm);
-
-            speedometer.RegisterObserver(speedAlarm);
+            
+            var speedometer = new Speedometer(simulator);
+            var speedAlarm = new SpeedAlarm(alarm, speedometer);
+            var seatBelt = new SeatBelt(alarm, speedometer);
+            
             speedometer.RegisterObserver(seatBelt);
             while (true)
             {

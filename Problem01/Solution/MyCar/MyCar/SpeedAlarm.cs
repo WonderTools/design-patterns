@@ -5,9 +5,10 @@
         private readonly Alarm _alarm;
         private int _oldSpeed = 0;
 
-        public SpeedAlarm(Alarm alarm)
+        public SpeedAlarm(Alarm alarm, Speedometer speedometer)
         {
             _alarm = alarm;
+            speedometer.RegisterObserver(this);
         }
         private void ProcessSpeed(int speed)
         {

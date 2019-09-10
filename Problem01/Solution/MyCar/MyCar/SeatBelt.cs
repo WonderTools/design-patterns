@@ -8,9 +8,10 @@ namespace MyCar
         private bool _isLocked = false;
         private int _oldSpeed = 0;
 
-        public SeatBelt(Alarm alarm)
+        public SeatBelt(Alarm alarm, Speedometer speedometer)
         {
             _alarm = alarm;
+            speedometer.RegisterObserver(this);
         }
 
         public void Lock()
