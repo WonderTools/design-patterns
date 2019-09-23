@@ -16,8 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Freecol\Freecol.csproj" />
-    <ProjectReference Include="..\MdfManufacturers\MdfManufacturers.csproj" />
     <ProjectReference Include="..\VendorContract\VendorContract.csproj" />
   </ItemGroup>
 
